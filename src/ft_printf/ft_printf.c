@@ -6,7 +6,7 @@
 /*   By: mgalliou <mgalliou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/23 14:36:02 by mgalliou          #+#    #+#             */
-/*   Updated: 2017/12/13 18:30:16 by mgalliou         ###   ########.fr       */
+/*   Updated: 2019/04/14 11:44:40 by mgalliou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,20 +36,17 @@ static int		print(va_list *ap, t_env *env)
 
 int				ft_printf(const char *format, ...)
 {
-	static t_env	*env = NULL;
-	va_list			ap;
-	int				tmp;
+	t_env		*env;
+	va_list		ap;
+	int			new_ret;
 
-	tmp = 0;
-	if (env && env->ret == -1)
-		tmp = env->ret;
-	if (!(env = envnew(env, format)))
+	if (!(env = envnew(format)))
 		return (-1);
 	va_start(ap, format);
 	va_copy(env->beg, ap);
-	env->ret = print(&ap, env);
+	new_ret = print(&ap, env);
 	va_end(ap);
-	if (tmp == -1)
-		env->ret = -1;
+	if (env->ret != -1)
+		env->ret = new_ret;
 	return (env->ret);
 }

@@ -6,7 +6,7 @@
 /*   By: mgalliou <mgalliou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/23 14:38:10 by mgalliou          #+#    #+#             */
-/*   Updated: 2017/06/28 11:19:43 by mgalliou         ###   ########.fr       */
+/*   Updated: 2019/04/14 11:50:46 by mgalliou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,9 +76,9 @@ char			*chars_to_str(va_list *ap, t_env *env);
 ** INIT
 */
 
-t_flags			*flagsnew(t_flags *flags);
-t_conv			*convnew(t_conv *conv);
-t_env			*envnew(t_env *env, const char *format);
+t_flags			*flagsnew();
+t_conv			*convnew();
+t_env			*envnew(const char *format);
 
 /*
 ** CONV GETTERS

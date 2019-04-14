@@ -6,7 +6,7 @@
 #    By: mgalliou <mgalliou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/05 14:47:57 by mgalliou          #+#    #+#              #
-#    Updated: 2018/04/24 17:42:20 by mgalliou         ###   ########.fr        #
+#    Updated: 2019/04/14 11:28:32 by mgalliou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,8 +30,8 @@ CRESET		=	$(ESC)[m
 # **************************************************************************** #
 
 NAME			=	libft.a
-INC_DIR			=	./includes
-SRC_DIR			=	./srcs
+INC_DIR			=	./include
+SRC_DIR			=	./src
 CC				=	gcc
 CFLAGS			=	-Wall -Wextra -Werror
 CPPFLAGS		=	-I$(INC_DIR)

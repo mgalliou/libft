@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_realloc.c                                       :+:      :+:    :+:   */
+/*   ft_memrealloc.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgalliou <mgalliou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/02 12:47:25 by mgalliou          #+#    #+#             */
-/*   Updated: 2018/02/20 17:17:04 by mgalliou         ###   ########.fr       */
+/*   Updated: 2019/05/01 11:25:10 by mgalliou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-void		*ft_realloc(void *ptr, size_t size)
+void		*ft_memrealloc(void *ptr, size_t size)
 {
 	void	*new;
 	size_t	plen;

@@ -6,7 +6,7 @@
 #    By: mgalliou <mgalliou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/05 14:47:57 by mgalliou          #+#    #+#              #
-#    Updated: 2019/04/14 11:28:32 by mgalliou         ###   ########.fr        #
+#    Updated: 2019/05/01 11:24:18 by mgalliou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,8 +30,9 @@ CRESET		=	$(ESC)[m
 # **************************************************************************** #
 
 NAME			=	libft.a
-INC_DIR			=	./include
-SRC_DIR			=	./src
+INC_DIR			=	include
+SRC_DIR			=	src
+OBJ_DIR			=	obj
 CC				=	gcc
 CFLAGS			=	-Wall -Wextra -Werror
 CPPFLAGS		=	-I$(INC_DIR)
@@ -98,7 +99,7 @@ SRC_NAME		=	\
 					ft_putstr_fd.c \
 					ft_puttab.c \
 					ft_puttab_fd.c \
-					ft_realloc.c \
+					ft_memrealloc.c \
 					ft_recursive_power.c \
 					ft_strcapitalize.c \
 					ft_setenv.c \
@@ -196,7 +197,6 @@ INC				+=	$(SRC_DIR)/$(SRC_PTF_DIR)/ft_printf.h \
 #	OBJECTS                                                                    #
 # **************************************************************************** #
 
-OBJ_DIR			=	./objs
 OBJ_NAME		=	$(SRC_NAME:.c=.o)
 OBJ				=	$(addprefix $(OBJ_DIR)/,$(OBJ_NAME))
 

@@ -6,7 +6,7 @@
 /*   By: mgalliou <mgalliou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 15:25:45 by mgalliou          #+#    #+#             */
-/*   Updated: 2018/03/06 16:29:38 by mgalliou         ###   ########.fr       */
+/*   Updated: 2019/05/01 11:24:34 by mgalliou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -215,7 +215,7 @@ int						ft_unsetenv(const char *name);
 
 void					ft_swap(void *a, void *b);
 int						ft_nbrlen(int n);
-void					*ft_realloc(void *ptr, size_t size);
+void					*ft_memrealloc(void *ptr, size_t size);
 intmax_t				ft_recursive_power(intmax_t nb, int power);
 char					*ft_strrealloc(char *str, size_t size);
 

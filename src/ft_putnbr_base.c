@@ -6,7 +6,7 @@
 /*   By: mgalliou <mgalliou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/01 11:55:49 by mgalliou          #+#    #+#             */
-/*   Updated: 2019/05/01 12:13:41 by mgalliou         ###   ########.fr       */
+/*   Updated: 2019/05/01 14:15:27 by mgalliou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,8 @@ void		ft_putnbr_base(uintmax_t n, int base)
 		ft_putnbr_base(n / base, base);
 		ft_putnbr_base(n % base, base);
 	}
-	else if (n % base < 1)
+	else if (n % base < 10)
 		ft_putchar(n + 48);
 	else
 		ft_putchar(n + 55);
-
 }

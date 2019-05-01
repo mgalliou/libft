@@ -1,33 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa_base.c                                     :+:      :+:    :+:   */
+/*   ft_nbrlen_base.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgalliou <mgalliou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/04/27 11:14:57 by mgalliou          #+#    #+#             */
-/*   Updated: 2019/05/01 12:01:26 by mgalliou         ###   ########.fr       */
+/*   Created: 2019/05/01 12:01:07 by mgalliou          #+#    #+#             */
+/*   Updated: 2019/05/01 12:01:39 by mgalliou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-char		*ft_itoa_base(uintmax_t n, int base)
+int	ft_nbrlen_base(uintmax_t n, int base)
 {
-	int		nbrlen;
-	char	*str;
+	int		i;
 
-	nbrlen = ft_nbrlen_base(n, base);
-	if (!(str = ft_memalloc(sizeof(char) * (nbrlen + 1))))
-		return (NULL);
-	str[nbrlen] = '\0';
-	while (nbrlen--)
+	i = 1;
+	while (n >= (uintmax_t)base)
 	{
-		if (n % base < 10)
-			str[nbrlen] = n % base + 48;
-		else
-			str[nbrlen] = n % base + 55;
 		n /= base;
+		++i;
 	}
-	return (str);
+	return (i);
 }

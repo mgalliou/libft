@@ -6,7 +6,7 @@
 /*   By: mgalliou <mgalliou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 15:25:45 by mgalliou          #+#    #+#             */
-/*   Updated: 2019/05/01 11:24:34 by mgalliou         ###   ########.fr       */
+/*   Updated: 2019/05/01 12:08:56 by mgalliou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,6 +109,7 @@ void					ft_putchar(char c);
 void					ft_putstr(char const *s);
 void					ft_putendl(char const *s);
 void					ft_putnbr(int n);
+void					ft_putnbr_base(uintmax_t n, int base);
 void					ft_putchar_fd(char c, int fd);
 void					ft_putstr_fd(char const *s, int fd);
 void					ft_putendl_fd(char const *s, int fd);
@@ -215,6 +216,7 @@ int						ft_unsetenv(const char *name);
 
 void					ft_swap(void *a, void *b);
 int						ft_nbrlen(int n);
+int						ft_nbrlen_base(uintmax_t n, int base);
 void					*ft_memrealloc(void *ptr, size_t size);
 intmax_t				ft_recursive_power(intmax_t nb, int power);
 char					*ft_strrealloc(char *str, size_t size);

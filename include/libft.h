@@ -6,7 +6,7 @@
 /*   By: mgalliou <mgalliou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 15:25:45 by mgalliou          #+#    #+#             */
-/*   Updated: 2019/05/01 12:08:56 by mgalliou         ###   ########.fr       */
+/*   Updated: 2019/05/06 11:23:40 by mgalliou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -172,6 +172,7 @@ t_list					*ft_lstnewnocpy(void *content,
 							size_t content_size);
 void					ft_lstaddback(t_list **alst, t_list *new);
 t_list					*ft_lstsort(t_list *beg, int cmp(t_list *a, t_list *b));
+int						ft_lstlen(t_list *lst);
 
 /*
 **binary_tree

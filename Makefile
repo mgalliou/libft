@@ -6,7 +6,7 @@
 #    By: mgalliou <mgalliou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/05 14:47:57 by mgalliou          #+#    #+#              #
-#    Updated: 2019/05/01 12:10:43 by mgalliou         ###   ########.fr        #
+#    Updated: 2019/05/06 11:44:11 by mgalliou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -75,6 +75,7 @@ SRC_NAME		=	\
 					ft_lstdel.c \
 					ft_lstdelone.c \
 					ft_lstiter.c \
+					ft_lstlen.c \
 					ft_lstmap.c \
 					ft_lstnew.c \
 					ft_lstnewnocpy.c \

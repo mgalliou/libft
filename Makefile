@@ -6,7 +6,7 @@
 #    By: mgalliou <mgalliou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/05 14:47:57 by mgalliou          #+#    #+#              #
-#    Updated: 2019/05/27 20:00:39 by mgalliou         ###   ########.fr        #
+#    Updated: 2019/05/27 22:38:03 by mgalliou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,6 +57,7 @@ SRC_NAME		=	\
 					ft_atoi.c \
 					ft_bzero.c \
 					ft_dlstaddback.c\
+					ft_dlstinsert.c\
 					ft_dlstnew.c \
 					ft_dlstnewnocpy.c \
 					ft_getenv.c \

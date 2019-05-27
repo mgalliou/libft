@@ -6,7 +6,7 @@
 /*   By: mgalliou <mgalliou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 15:25:45 by mgalliou          #+#    #+#             */
-/*   Updated: 2019/05/06 11:23:40 by mgalliou         ###   ########.fr       */
+/*   Updated: 2019/05/27 19:58:28 by mgalliou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,14 @@ typedef	struct			s_list
 	size_t				content_size;
 	struct s_list		*next;
 }						t_list;
+
+typedef	struct			s_dlist
+{
+	void				*content;
+	size_t				content_size;
+	struct s_dlist		*next;
+	struct s_dlist		*prev;
+}						t_dlist;
 
 typedef struct			s_btree
 {
@@ -173,6 +181,14 @@ t_list					*ft_lstnewnocpy(void *content,
 void					ft_lstaddback(t_list **alst, t_list *new);
 t_list					*ft_lstsort(t_list *beg, int cmp(t_list *a, t_list *b));
 int						ft_lstlen(t_list *lst);
+
+/*
+**		dlist
+*/
+
+void					ft_dlstaddback(t_dlist **adlst, t_dlist *new);
+t_dlist					*ft_dlstnew(void const *content, size_t content_size);
+t_dlist					*ft_dlstnewnocpy(void *content, size_t content_size);
 
 /*
 **binary_tree

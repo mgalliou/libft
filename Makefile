@@ -6,7 +6,7 @@
 #    By: mgalliou <mgalliou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/05 14:47:57 by mgalliou          #+#    #+#              #
-#    Updated: 2019/05/06 11:44:11 by mgalliou         ###   ########.fr        #
+#    Updated: 2019/05/27 20:00:39 by mgalliou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,6 +56,9 @@ SRC_NAME		=	\
 					btree_search_item.c \
 					ft_atoi.c \
 					ft_bzero.c \
+					ft_dlstaddback.c\
+					ft_dlstnew.c \
+					ft_dlstnewnocpy.c \
 					ft_getenv.c \
 					ft_getcol.c \
 					ft_ftoa.c \

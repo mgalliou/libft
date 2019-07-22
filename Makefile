@@ -6,7 +6,7 @@
 #    By: mgalliou <mgalliou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/05 14:47:57 by mgalliou          #+#    #+#              #
-#    Updated: 2019/05/27 22:38:03 by mgalliou         ###   ########.fr        #
+#    Updated: 2019/07/22 11:18:14 by mgalliou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -94,6 +94,7 @@ SRC_NAME		=	\
 					ft_memset.c \
 					ft_nbrlen.c \
 					ft_nbrlen_base.c \
+					ft_ptr_align.c \
 					ft_putchar.c \
 					ft_putchar_fd.c \
 					ft_putendl.c \

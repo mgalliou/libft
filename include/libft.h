@@ -6,7 +6,7 @@
 /*   By: mgalliou <mgalliou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 15:25:45 by mgalliou          #+#    #+#             */
-/*   Updated: 2019/05/27 22:37:24 by mgalliou         ###   ########.fr       */
+/*   Updated: 2019/07/22 11:23:20 by mgalliou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -233,6 +233,7 @@ int						ft_unsetenv(const char *name);
 */
 
 void					ft_swap(void *a, void *b);
+void					*ft_ptr_align(void *ptr, size_t aling);
 int						ft_nbrlen(int n);
 int						ft_nbrlen_base(uintmax_t n, int base);
 void					*ft_memrealloc(void *ptr, size_t size);

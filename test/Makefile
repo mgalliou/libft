@@ -6,7 +6,7 @@
 #    By: mgalliou <mgalliou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/06/28 13:13:07 by mgalliou          #+#    #+#              #
-#    Updated: 2019/08/19 15:20:17 by mgalliou         ###   ########.fr        #
+#    Updated: 2019/08/19 17:21:32 by mgalliou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,7 +58,8 @@ endif
 SRC_NAME	=	main.c\
 				suite_ft_dlstaddback.c\
 				suite_ft_dlstnew.c\
-				suite_ft_lstlen.c
+				suite_ft_lstlen.c\
+				suite_ft_dlstinsert.c
 SRC			=	$(addprefix $(SRC_DIR)/,$(SRC_NAME))
 
 # **************************************************************************** #

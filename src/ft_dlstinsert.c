@@ -6,7 +6,7 @@
 /*   By: mgalliou <mgalliou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 22:30:38 by mgalliou          #+#    #+#             */
-/*   Updated: 2019/05/27 22:36:12 by mgalliou         ###   ########.fr       */
+/*   Updated: 2019/08/19 18:15:22 by mgalliou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,20 +19,25 @@ void	ft_dlstinsert(t_dlist **adlst, t_dlist *new)
 	tmp = *adlst;
 	if (new)
 	{
-		if (tmp)
+		if (!tmp)
 		{
-			if (tmp->prev == NULL)
+			*adlst = new;
+		}
+		else if (!tmp->prev)
+		{
+			*adlst = new;
+			new->next = tmp;
+			tmp->prev = new;
+		}
+		else
+		{
+			new->prev = tmp->prev;
+			if (new->prev)
 			{
-				ft_lstadd((t_list**)adlst, (t_list*)new);
+				new->prev->next = new;
 			}
-			else
-			{
-				new->prev = tmp->prev;
-				tmp->prev->next = new;
-				new->next = tmp->next;
-				if (tmp->next)
-					tmp->next->prev = new;
-			}
+			new->next = tmp;
+			tmp->prev = new;
 		}
 	}
 }

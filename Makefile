@@ -6,7 +6,7 @@
 #    By: mgalliou <mgalliou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/05 14:47:57 by mgalliou          #+#    #+#              #
-#    Updated: 2019/07/22 11:18:14 by mgalliou         ###   ########.fr        #
+#    Updated: 2019/08/19 15:16:15 by mgalliou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -234,6 +234,10 @@ $(OBJ_DIR)/%.o : $(SRC_DIR)/%.c $(INC)
 	@mkdir -p $(dir $@)
 	@$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
 	$(call print_info,"$(<:srcs/%=%) compiled")
+
+check:
+	make -C test
+	./test/test
 
 clean :
 	@$(RM) $(OBJ_DIR)

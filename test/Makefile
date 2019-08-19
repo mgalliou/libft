@@ -6,7 +6,7 @@
 #    By: mgalliou <mgalliou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/06/28 13:13:07 by mgalliou          #+#    #+#              #
-#    Updated: 2019/05/09 21:59:37 by mgalliou         ###   ########.fr        #
+#    Updated: 2019/08/19 15:20:17 by mgalliou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,7 +39,7 @@ OBJ_DIR		=	obj
 LIB_DIR		=	libftest ..
 RM			= 	rm -rf
 CC			=	gcc
-CFLAGS		=	#-Wall -Wextra -Werror
+CFLAGS		=	-Wall -Wextra -Werror
 CFLAGS_DEBUG =	-g -fsanitize=address
 CPPFLAGS	=	$(foreach dir,$(INC_DIR),-I$(dir))
 LDFLAGS		=	$(foreach dir,$(LIB_DIR),-L$(dir))
@@ -55,7 +55,10 @@ endif
 #	SOURCES
 # **************************************************************************** #
 
-SRC_NAME	=	main.c
+SRC_NAME	=	main.c\
+				suite_ft_dlstaddback.c\
+				suite_ft_dlstnew.c\
+				suite_ft_lstlen.c
 SRC			=	$(addprefix $(SRC_DIR)/,$(SRC_NAME))
 
 # **************************************************************************** #
@@ -72,16 +75,16 @@ all : $(NAME)
 debug: CFLAGS := $(CFLAGS) $(CFLAGS_DEBUG)
 debug: all
 
-$(NAME): $(OBJ)
+$(NAME): $(OBJ) ../$(PROJECT) 
 	$(CC) $(CPPFLAGS) $(CFLAGS) $(LDFLAGS) -o $@ $(OBJ) $(LDLIBS)
 
 $(PROJECT):
-	make -C ../
+	make -C ../ CFLAGS="$(CFLAGS)"
 
 $(LIB):
 	make -C $(LIB_DIR) CFLAGS="$(CFLAGS)"
 
-$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c $(LIB)
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c $(LIB) $(INC)
 	@mkdir -p $(dir $@)
 	$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
 

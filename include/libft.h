@@ -6,7 +6,7 @@
 /*   By: mgalliou <mgalliou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 15:25:45 by mgalliou          #+#    #+#             */
-/*   Updated: 2019/07/22 11:23:20 by mgalliou         ###   ########.fr       */
+/*   Updated: 2019/08/23 12:55:12 by mgalliou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -190,6 +190,7 @@ t_dlist					*ft_dlstnew(void const *content, size_t content_size);
 t_dlist					*ft_dlstnewnocpy(void *content, size_t content_size);
 void					ft_dlstaddback(t_dlist **adlst, t_dlist *new);
 void					ft_dlstinsert(t_dlist **adlst, t_dlist *new);
+void					ft_dlstremove(t_dlist **adlst, t_dlist *elem);
 
 /*
 **binary_tree

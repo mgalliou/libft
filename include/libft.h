@@ -6,7 +6,7 @@
 /*   By: mgalliou <mgalliou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 15:25:45 by mgalliou          #+#    #+#             */
-/*   Updated: 2019/08/23 12:55:12 by mgalliou         ###   ########.fr       */
+/*   Updated: 2020/02/10 14:44:06 by mgalliou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -156,6 +156,7 @@ char					**ft_tabdup(char **tab);
 int						ft_wordcount(char const *str, char c);
 void					ft_puttab(char **sol);
 void					ft_puttab_fd(char **sol, int fd);
+int						ft_atoi_base(char *str, char *base);
 char					*ft_itoa_base(uintmax_t n, int base);
 char					*ft_ftoa(long double nbr, int preci);
 int						ft_wcharlen(wint_t wint);

@@ -6,7 +6,7 @@
 #    By: mgalliou <mgalliou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/05 14:47:57 by mgalliou          #+#    #+#              #
-#    Updated: 2019/08/23 12:57:19 by mgalliou         ###   ########.fr        #
+#    Updated: 2020/02/10 14:43:33 by mgalliou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,6 +55,7 @@ SRC_NAME		=	\
 					btree_level_count.c \
 					btree_search_item.c \
 					ft_atoi.c \
+					ft_atoi_base.c\
 					ft_bzero.c \
 					ft_dlstaddback.c\
 					ft_dlstinsert.c\

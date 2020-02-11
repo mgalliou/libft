@@ -6,7 +6,7 @@
 #    By: mgalliou <mgalliou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/05 14:47:57 by mgalliou          #+#    #+#              #
-#    Updated: 2020/02/10 14:43:33 by mgalliou         ###   ########.fr        #
+#    Updated: 2020/02/11 10:38:19 by mgalliou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,7 +36,7 @@ OBJ_DIR			=	obj
 CC				=	gcc
 CFLAGS			=	-Wall -Wextra -Werror
 CPPFLAGS		=	-I$(INC_DIR)
-AR				=	ar rc
+ARFLAGS			=	rc
 RL				=	ranlib
 RM				= 	rm -rf
 
@@ -227,7 +227,7 @@ all : $(NAME)
 
 $(NAME): $(OBJ) $(SRC)
 	$(call print_info,"all objects created with $(CFLAGS)")
-	@$(AR) $@ $^
+	@$(AR) $(ARFLAGS) $@ $^
 	$(call print_info,"library created")
 	@$(RL) $@
 	$(call print_info,"library indexed")

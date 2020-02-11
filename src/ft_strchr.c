@@ -6,7 +6,7 @@
 /*   By: mgalliou <mgalliou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 16:38:35 by mgalliou          #+#    #+#             */
-/*   Updated: 2017/08/16 11:09:17 by mgalliou         ###   ########.fr       */
+/*   Updated: 2020/02/11 11:44:10 by mgalliou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,8 @@
 
 char		*ft_strchr(const char *s, int c)
 {
-	while (*s)
+	while (*s && *s != (char)c)
 	{
-		if (*s == (char)c)
-			return ((char*)s);
 		++s;
 	}
 	if (*s == (char)c)

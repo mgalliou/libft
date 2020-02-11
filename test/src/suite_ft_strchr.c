@@ -6,7 +6,7 @@
 /*   By: mgalliou <mgalliou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/11 11:18:05 by mgalliou          #+#    #+#             */
-/*   Updated: 2020/02/11 11:42:55 by mgalliou         ###   ########.fr       */
+/*   Updated: 2020/02/11 11:58:55 by mgalliou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static TEST(when_c_is_null)
 	char s[] = "abcde";
 	char c   = '\0';
 
-	assert_str_equal(strchr(s, c), ft_strchr(s, c));
+	assert_ptr_equal(strchr(s, c), ft_strchr(s, c));
 }
 
 static TEST(when_c_is_last_char_of_string)
@@ -26,7 +26,7 @@ static TEST(when_c_is_last_char_of_string)
 	char s[] = "abcde";
 	char c   = 'e';
 
-	assert_str_equal(strchr(s, c), ft_strchr(s, c));
+	assert_ptr_equal(strchr(s, c), ft_strchr(s, c));
 }
 
 static TEST(when_c_is_in_string)
@@ -34,7 +34,7 @@ static TEST(when_c_is_in_string)
 	char s[] = "abcde";
 	char c   = 'c';
 
-	assert_str_equal(strchr(s, c), ft_strchr(s, c));
+	assert_ptr_equal(strchr(s, c), ft_strchr(s, c));
 }
 
 static TEST(when_c_is_first_char_of_string)
@@ -42,7 +42,7 @@ static TEST(when_c_is_first_char_of_string)
 	char s[] = "abcde";
 	char c   = 'a';
 
-	assert_str_equal(strchr(s, c), ft_strchr(s, c));
+	assert_ptr_equal(strchr(s, c), ft_strchr(s, c));
 }
 
 
@@ -52,7 +52,7 @@ static TEST(when_c_is_not_in_string)
 	char c   = 'a';
 
 	s = strdup("abcde");
-	assert_str_equal(strchr(s, c), ft_strchr(s, c));
+	assert_ptr_equal(strchr(s, c), ft_strchr(s, c));
 }
 
 static TEST(when_s_is_empty_and_c_is_null)
@@ -60,7 +60,7 @@ static TEST(when_s_is_empty_and_c_is_null)
 	char s[] = "";
 	char c   = '\0';
 
-	assert_str_equal(strchr(s, c), ft_strchr(s, c));
+	assert_ptr_equal(strchr(s, c), ft_strchr(s, c));
 }
 
 static TEST(when_s_is_empty)
@@ -69,7 +69,7 @@ static TEST(when_s_is_empty)
 	char c   = 'a';
 
 	s = strdup("");
-	assert_str_equal(strchr(s, c), NULL);
+	assert_ptr_equal(strchr(s, c), ft_strchr(s, c));
 }
 
 TEST_SUITE(suite_ft_strchr)

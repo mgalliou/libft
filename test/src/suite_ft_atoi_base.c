@@ -6,7 +6,7 @@
 /*   By: mgalliou <mgalliou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/10 15:17:46 by mgalliou          #+#    #+#             */
-/*   Updated: 2020/02/10 16:31:15 by mgalliou         ###   ########.fr       */
+/*   Updated: 2020/02/11 15:10:44 by mgalliou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,9 +42,19 @@ static TEST(when_duplicate_char_in_base_3)
 	assert_int_equal(0, ft_atoi_base("10", "123456788"));
 }
 
-static TEST(when_base_contain_sign)
+static TEST(when_base_contain_sign_1)
 {
 	assert_int_equal(0, ft_atoi_base("10", "12345678+"));
+}
+
+static TEST(when_base_contain_sign_2)
+{
+	assert_int_equal(0, ft_atoi_base("10", "-12345678"));
+}
+
+static TEST(when_base_contain_sign_3)
+{
+	assert_int_equal(0, ft_atoi_base("10", "12345+678"));
 }
 
 static TEST(when_10_in_base_10)
@@ -80,7 +90,9 @@ TEST_SUITE(suite_ft_atoi_base)
 	RUN_TEST(when_duplicate_char_in_base_1);
 	RUN_TEST(when_duplicate_char_in_base_2);
 	RUN_TEST(when_duplicate_char_in_base_3);
-	RUN_TEST(when_base_contain_sign);
+	RUN_TEST(when_base_contain_sign_1);
+	RUN_TEST(when_base_contain_sign_2);
+	RUN_TEST(when_base_contain_sign_3);
 	RUN_TEST(when_10_in_base_10);
 	RUN_TEST(when_minus_10_in_base_10);
 	RUN_TEST(when_minus_minus_10_in_base_10);

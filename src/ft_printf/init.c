@@ -6,14 +6,14 @@
 /*   By: mgalliou <mgalliou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/12 12:51:31 by mgalliou          #+#    #+#             */
-/*   Updated: 2019/04/14 11:50:12 by mgalliou         ###   ########.fr       */
+/*   Updated: 2020/03/06 13:05:40 by mgalliou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include <libft.h>
 
-t_flags		*flagsnew()
+t_flags		*flagsnew(void)
 {
 	static t_flags new;
 
@@ -26,9 +26,10 @@ t_flags		*flagsnew()
 	return (&new);
 }
 
-t_conv		*convnew()
+t_conv		*convnew(void)
 {
 	static t_conv new;
+
 	new.flags = flagsnew();
 	new.id = 0;
 	new.width = 0;

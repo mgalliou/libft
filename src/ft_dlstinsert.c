@@ -6,7 +6,7 @@
 /*   By: mgalliou <mgalliou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 22:30:38 by mgalliou          #+#    #+#             */
-/*   Updated: 2019/08/19 18:15:22 by mgalliou         ###   ########.fr       */
+/*   Updated: 2020/03/06 13:04:37 by mgalliou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,7 @@ void	ft_dlstinsert(t_dlist **adlst, t_dlist *new)
 	if (new)
 	{
 		if (!tmp)
-		{
 			*adlst = new;
-		}
 		else if (!tmp->prev)
 		{
 			*adlst = new;

@@ -6,13 +6,13 @@
 /*   By: mgalliou <mgalliou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/10 14:41:31 by mgalliou          #+#    #+#             */
-/*   Updated: 2020/02/10 16:33:35 by mgalliou         ###   ########.fr       */
+/*   Updated: 2020/03/06 13:04:08 by mgalliou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-static  int base_is_valid(char *b)
+static int	base_is_valid(char *b)
 {
 	int l;
 
@@ -47,7 +47,7 @@ int			ft_atoi_base(char *str, char *base)
 	n = 1;
 	r = 0;
 	l = base_is_valid(base);
-	if (!l) 
+	if (!l)
 	{
 		return (0);
 	}
